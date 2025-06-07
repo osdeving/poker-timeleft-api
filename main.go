@@ -32,5 +32,5 @@ func main() {
 	database.ConnectMongo(config.AppConfig.MongoURL)
 
 	r := setupRouter()
-	r.Run(":8080")
+	r.Run(":" + config.AppConfig.Port)
 }
