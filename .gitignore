@@ -1,0 +1,48 @@
+# Binaries e executáveis compilados
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Build output
+/build/
+bin/
+dist/
+
+# Diretórios Go e dependências cacheadas
+/vendor/
+/coverage.out
+
+# Módulos Go
+go.sum
+
+# VSCode settings
+.vscode/
+*.code-workspace
+
+# Arquivos de ambiente sensíveis
+.env
+.env.*
+
+
+# Logs
+*.log
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Testes temporários
+*.tmp
+*.bak
+
+# IDEs
+.idea/
+*.iml
+
+# Node (se usar frontend junto)
+node_modules/
+
+*.http
