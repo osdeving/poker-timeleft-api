@@ -26,7 +26,7 @@ func setupRouter() *gin.Engine {
 
 func main() {
 	config.LoadConfig()
-	database.ConnectMongo(config.AppConfig.MongoURI)
+	database.ConnectMongo(config.AppConfig.MongoURL)
 
 	r := setupRouter()
 	r.Run(":8080")
