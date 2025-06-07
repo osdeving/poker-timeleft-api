@@ -1,7 +1,7 @@
 package config
 
 type Config struct {
-	MongoURI string `mapstructure:"MONGO_PUBLIC_URL"`
+	MongoURL string `mapstructure:"MONGO_URL"`
 }
 
 var AppConfig Config
