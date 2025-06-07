@@ -15,8 +15,6 @@ dist/
 /vendor/
 /coverage.out
 
-# Módulos Go
-go.sum
 
 # VSCode settings
 .vscode/
