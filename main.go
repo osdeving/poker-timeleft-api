@@ -1,6 +1,8 @@
 package main
 
 import (
+	"log"
+
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/osdeving/poker-timeleft-api/config"
@@ -26,6 +28,7 @@ func setupRouter() *gin.Engine {
 
 func main() {
 	config.LoadConfig()
+	log.Println("Mongo URL is :", config.AppConfig.MongoURL)
 	database.ConnectMongo(config.AppConfig.MongoURL)
 
 	r := setupRouter()

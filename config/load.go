@@ -8,11 +8,13 @@ import (
 )
 
 func LoadConfig() {
-	viper.SetConfigFile(".env")
 	viper.SetConfigType("env")
-	viper.AutomaticEnv()
 	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
+	viper.AutomaticEnv()
 
+	viper.SetDefault("MONGO_URL", "mongodb://mongo:icBbXHqaqUoyMPYZijCkurGaLzPZsvKB@mongodb.railway.internal:27017")
+
+	viper.SetConfigFile(".env")
 	if err := viper.ReadInConfig(); err != nil {
 		log.Println("⚠️  .env não encontrado, usando variáveis do sistema")
 	}
