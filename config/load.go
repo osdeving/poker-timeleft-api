@@ -27,11 +27,9 @@ func LoadConfig() {
 
 	log.Println("✅ Config carregada com sucesso")
 
-	// 👇 Aqui você confere o que realmente veio do sistema operacional (OS)
 	log.Printf("🔎 OS Env PORT: %s", os.Getenv("PORT"))
-	log.Printf("🔎 OS Env MONGO_URI: %s", os.Getenv("MONGO_URI"))
+	log.Printf("🔎 OS Env MONGO_URL: %s", os.Getenv("MONGO_URL"))
 
-	// 👇 E aqui o que ficou no Viper (via defaults, .env ou OS)
 	log.Printf("✅ Viper PORT: %s", AppConfig.Port)
 	log.Printf("✅ Viper MONGO_URL: %s", AppConfig.MongoURL)
 }
